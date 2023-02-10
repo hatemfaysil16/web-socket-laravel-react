@@ -1,4 +1,4 @@
-
+  
 <a href="{{route('player.create')}}">player create</a>
 <table class="table">
   <thead>

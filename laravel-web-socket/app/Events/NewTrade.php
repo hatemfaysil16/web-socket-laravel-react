@@ -20,7 +20,7 @@ class NewTrade implements ShouldBroadcast
      *
      * @return void
      */
-    public function __construct($trade,$id)
+    public function __construct($trade)
     {
         $this->trade = $trade;
     }
