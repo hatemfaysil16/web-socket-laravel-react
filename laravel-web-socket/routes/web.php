@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\PlayerController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +29,9 @@ Route::get('player/create',[PlayerController::class,'create'])->name('player.cre
 Route::post('player/store',[PlayerController::class,'store'])->name('player.store');
 Route::get('player/delete/{player}',[PlayerController::class,'delete'])->name('player.delete');
     });
+
+
+    Route::get('Chat/{roomId}',[ChatController::class,'StartChat'])->middleware('auth');
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();
